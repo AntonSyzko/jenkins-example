@@ -5,6 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+                echo "Starting maven build"
                 withMaven(maven : 'maven_3_5_2') {
                     sh 'mvn clean compile'
                 }
