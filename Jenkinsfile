@@ -8,7 +8,7 @@ pipeline {
                 echo "Starting maven build"
                     sh "whoami"
                     sh "ls -la"
-                    sh 'java --version'
+                    sh 'java -version'
                 withMaven(maven : 'maven_3_5_2') {
                     sh 'mvn --version'
                     sh 'mvn clean compile'
