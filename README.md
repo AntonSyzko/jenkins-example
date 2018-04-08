@@ -15,7 +15,7 @@ pass root12345
 jenkins_user user - uid 1000
 docker  run  -u jenkins_user --hostname=jenkins --name=myjenkins  --rm   -p 8080:8080  --expose 8080  -p 50000:50000  --expose 50000  -v /jenkins/jenkins_home:/var/jenkins_home jenkins
 
-sudo docker  run  -d -u root --hostname=jenkins --name=myjenkins  --rm   -p 8080:8080  --expose 8080  -p 50000:50000  --expose 50000  -v /jenkins_vol:/var/jenkins_home   --restart=always jenkins
+sudo docker  run  -d -u root --hostname=jenkins --name=myjenkins     -p 8080:8080  --expose 8080  -p 50000:50000  --expose 50000  -v jenkins:/var/jenkins_home   --restart=always jenkins
 
 
 sudo docker  run  -u root --hostname=jenkins --name=myjenkins  --rm   -p 8080:8080  --expose 8080  -p 50000:50000  --expose 50000  -v /jenkins:/var/jenkins_home  

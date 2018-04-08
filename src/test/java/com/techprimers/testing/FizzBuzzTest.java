@@ -32,12 +32,7 @@ class FizzBuzzTest {
         Assertions.assertEquals(fizzBuzz, "Buzz");
     }
 
-    @DisplayName("Failed Test Intentionally")
-    @Test
-    public void testBuzzFail() {
-        String fizzBuzz = fB.play(7);
-        Assertions.assertEquals(fizzBuzz, "Buzz");
-    }
+  
 
     @DisplayName("Don't Play FizzBuzz with number = 0")
     @Test
