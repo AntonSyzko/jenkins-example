@@ -35,7 +35,7 @@ class FizzBuzzTest {
     @DisplayName("Failed Test Intentionally")
     @Test
     public void testBuzzFail() {
-        String fizzBuzz = fB.play(4);
+        String fizzBuzz = fB.play(7);
         Assertions.assertEquals(fizzBuzz, "Buzz");
     }
 
