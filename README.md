@@ -12,6 +12,7 @@ sudo useradd --home-dir /jenkins/jenkins_home --create-home --shell /bin/bash je
 sudo passwd jenkins_user
 pass root12345
 
+chown 1000 ./jenkins_home ????
 jenkins_user user - uid 1000
 docker  run  -u jenkins_user --hostname=jenkins --name=myjenkins  --rm   -p 8080:8080  --expose 8080  -p 50000:50000  --expose 50000  -v /jenkins/jenkins_home:/var/jenkins_home jenkins
 

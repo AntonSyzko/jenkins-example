@@ -9,7 +9,7 @@ pipeline {
                     sh "whoami"
                     sh "ls -la"
                     sh 'java -version'
-                withMaven(maven : 'maven_3_5_2') {
+                withMaven(maven : 'maven_3_5_3') {
                     sh 'mvn --version'
                     sh 'mvn clean compile'
                 }
@@ -19,7 +19,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_5_2') {
+                withMaven(maven : 'maven_3_5_3') {
                     sh 'mvn test'
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
 
         stage ('Installation Stage') {
             steps {
-                withMaven(maven : 'maven_3_5_2') {
+                withMaven(maven : 'maven_3_5_3') {
                     sh 'mvn install'
                 }
             }
