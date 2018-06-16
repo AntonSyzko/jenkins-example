@@ -2,6 +2,9 @@ package com.techprimers.testing;
 
 public class FizzBuzz {
 
+    public static void main(String[] args) {
+        System.out.println(" hello to Jenkins  !!! ");
+    }
     public String play(int number) {
 
         if (number == 0) throw new IllegalArgumentException("Number must not be 0");
