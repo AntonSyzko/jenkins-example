@@ -3,3 +3,9 @@ language: java
 jdk:
 - oraclejdk8
 script: docker ps
+script: docker run --name=hello  hello-world
+script: docker ps -a
+script: docker images -a 
+script: docker stop hello && docker rm -v hello
+script: docker rmi -f hello-world
+script: docker ps -a && docker images -a 
